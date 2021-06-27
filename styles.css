@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Indie+Flower&family=Poppins:wght@200;300;400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Functional Selectors */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1128px;
+}
+
+.row {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+/* Header Styles */
+
+header {
+  background-image: url(img/bgrnd01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-top: 75%;
+  position: relative;
+}
+
+.navigation {
+  margin-left: 4vmin;
+  position: absolute;
+  top: 3vh;
+  z-index: 999;
+  align-items: center;
+}
+
+.logo {
+  width: 5.5rem;
+}
+
+/* Hamburger Menu Element Styles */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 5px;
+  position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  /* background-color: rgba(119, 179, 185, 0.582); */
+  /* display: none; */
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  right: 0;
+  width: max-content;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+}
+
+nav a {
+  background-color: rgba(145, 98, 199, 0.712);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  z-index: 999;
+}
+
+.nav-toggle:checked ~ nav {
+  /* display: block; */
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  /* display: block; */
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label {
+  transform: rotate(360deg);
+  transition: transform 250ms ease-in-out 250ms;
+}
+
+/* Magunkrol Section */
+
+#about {
+  background-color: rgb(221, 215, 215);
+  padding: 2em 0;
+  text-align: center;
+}
+
+.szoveg {
+  /* width: 70%; */
+  margin: auto;
+}
+.szoveg h2 {
+  color: #233e8b;
+  font-family: "Hachi Maru Pop", cursive;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.szoveg p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 2em;
+}
+
+.alairas {
+  line-height: 5rem;
+}
+
+.booked4-us-button,
+.booked4-us-blue {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+/* Footer Styling */
+
+#footer {
+  background-color: #1eae98;
+  padding: 4rem 0 1rem;
+}
+.contacts {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.contacts > a {
+}
+
+.contact__item {
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  text-transform: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.icon {
+  font-size: 1.2em;
+  margin-bottom: -0.5em;
+}
+
+.copyright {
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 4em;
+}
+/* Media Queries for Responsivity */
+@media screen and (min-width: 850px) {
+  header {
+    padding-top: 65%;
+    background-position: center;
+  }
+  .logo {
+    width: 8rem;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+  nav {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  nav ul {
+    /* background-color: rgb(153, 146, 146); */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* gap: 0.7rem; */
+    text-align: right;
+  }
+
+  nav a {
+    background-color: rgba(145, 98, 199, 0.788);
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    opacity: 1;
+    position: relative;
+  }
+  nav li {
+    margin-bottom: 0;
+    margin-left: 3em;
+  }
+
+  nav a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.692);
+    position: absolute;
+    bottom: -0.3em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+
+  .szoveg {
+    width: 70%;
+  }
+
+  .szoveg h2 {
+    font-size: 3rem;
+  }
+  .contacts {
+    flex-direction: row;
+    gap: 12%;
+    width: 65%;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+    text-align: justify;
+  }
+}

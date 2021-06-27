@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Yoga Lab</title>
+    <script
+      type="text/javascript"
+      src="https://booked4.us/cdn/lib/embedding-v2/js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://booked4.us/cdn/lib/embedding-v2/css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container row navigation">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img
+            src="img/logo_small.png"
+            alt="Yoga Lab logo depicting a yoga
+          postion"
+          />
+        </a>
+
+        <!-- Elements for Hamburger Menu -->
+
+        <input type="checkbox" class="nav-toggle" id="nav-toggle" />
+
+        <!-- Navigation Links -->
+        <nav class="nav">
+          <ul class="nav__list nav__list--primary">
+            <li class="nav__item">
+              <a href="#about" class="nav__link">Bemutatkozó</a>
+            </li>
+            <li class="nav__item">
+              <a href="#reservation-container" class="nav__link">Időpont</a>
+            </li>
+            <li class="nav__item">
+              <a href="#footer" class="nav__link">Kapcsolat</a>
+            </li>
+          </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      </div>
+    </header>
+
+    <!-- Bemutatkozo -->
+    <section id="about">
+      <div class="container">
+        <div class="szoveg">
+          <h2>Rólunk</h2>
+          <p>
+            Kedves Gyakorolni Vágyó, <br />
+            Várlak téged, ha érdeklődsz a jóga iránt, de még soha nem próbáltad,
+            vagy ha már bőszen gyakorolsz, és ezt szívesen teszed másokkal
+            együtt. A jóga számomra egy izgalmas útkeresés, a lelassuláson és
+            önmegfigyelésen keresztül, ami nem mindig mondható könnyűnek, de
+            felszabadítónak annál inkább. Arra biztatlak, hogy ne higgy nekem,
+            kezdj el gyakorolni, és derítsd ki számodra mit jelent. <br />
+            <span class="alairas">🙋‍♀️ Kiss Mónika, Hatha jóga instruktor</span>
+          </p>
+        </div>
+      </div>
+      <div id="reservation-container" class="booking"></div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row contacts">
+          <a
+            href="https://www.google.com/maps/place/Szolnok,+Meder+u.+20,+5000+Hungary/@47.1713775,20.1820089,17z/data=!3m1!4b1!4m5!3m4!1s0x4741416be669b5e9:0x2e271c21d55a9c92!8m2!3d47.1713775!4d20.1841976"
+            class="contact__item"
+            target="_blank"
+            ><i class="fas fa-search-location icon"></i>
+            <p>5000 Szolnok Meder u. 20</p>
+          </a>
+          <a
+            href="mailto:yogalab2.0@gmail.com"
+            class="contact__item"
+            target="_blank"
+            ><i class="fas fa-at icon"></i>
+            <p>yogalab2.0@gmail.com</p>
+          </a>
+          <a href="tel:0036703403543" class="contact__item" target="_blank">
+            <i class="fas fa-phone icon"></i>
+            <p>+36703403543</p>
+          </a>
+          <a
+            href="https://www.facebook.com/Yoga-Lab-110912714559974"
+            class="contact__item"
+            target="_blank"
+          >
+            <i class="fab fa-facebook icon"></i>
+            <p>Facebook oldal</p>
+          </a>
+        </div>
+      </div>
+      <h4 class="copyright">
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        PineApple TM
+      </h4>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
